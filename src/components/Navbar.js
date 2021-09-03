@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Navbar(props) {
   return (
@@ -13,18 +13,15 @@ function Navbar(props) {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            {/* <Link className="nav-link" to="/">{props.homeText} <span className="sr-only">(current)</span></Link>
-             */}
-             <a className="nav-link active" aria-current="page" href="/">Home</a>
+            <Link className="nav-link" to="/">{props.homeText} <span className="sr-only">(current)</span></Link>
+            
+             {/* <a className="nav-link active" aria-current="page" href="/">Home</a> */}
           </li>
-          {/* <li className="nav-item">
+          <li className="nav-item">
             <Link className="nav-link" to="/about">{props.aboutText}</Link>
-          </li> */}
+          </li>
         </ul>
-        {/* <form className="form-inline my-2 my-lg-0">
-          <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-          <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form> */}
+    
         <div className={`custom-control custom-switch text-${props.modePassed==="light"?"dark":"light"}`}>
           <input type="checkbox" onClick={props.changeMode} className="custom-control-input" id="customSwitch1"/>
           <label className="custom-control-label" htmlFor="customSwitch1">Enable DarkMode</label>
